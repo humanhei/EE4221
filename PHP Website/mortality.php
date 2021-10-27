@@ -1,33 +1,51 @@
-<a href="query.php">Pick another query</a>
- 
- <?php
- 
-        //Query for childhood mortality rate
-        $sql = "select name, mortalityunder5 from countrydata_final;";
-        
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            //echo "success";
-            echo '<table class="data"  style="width: 80%">';
-            echo '<tr>';
-            echo '<th style="text-align:left">Country Name</th>';
-            echo '<th style="text-align:left">Childhood Mortality</th>';
-            echo '</tr>';
-            
+<div style="text-align:center;"><H1>Childhood DataTable</H1></div>
+<a href="query.php" style="padding:15px;"><button type="button" class="btn btn-primary">Pick another query</button></a>
+<hr>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+<link rel="stylesheet" href="./css/styles.css">
+
+
+
+<body style="padding:20px;">
+    <table id="example" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Country Name</th>
+                    <th>Childhood Mortality</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php 
+              $sql = "select name, mortalityunder5 from countrydata_final;";
+       
+            $result = $conn->query($sql);
             while($row = $result->fetch_assoc()) {
-            //echo '<p>';
-           
-            echo '<tr>';
-            echo '<td>';
-            echo $row["name"];
-            echo '&nbsp';
-            echo '<td>';
-            echo $row["mortalityunder5"];
-            echo '&nbsp';
-            echo '<br>';
-            echo '</tr>';
-            }
-            echo '</table>';
-                                                }
-                                        
-    ?>
+                $name = $row["name"];
+                $mortalityunder5 = $row["mortalityunder5"];
+               
+            ?> 
+            <tr>
+                <td><?php echo $name; ?></td>
+                <td><?php echo $mortalityunder5; ?></td>
+            </tr>
+            <?php   }  //End of while loop
+                ?> 
+            </tbody>
+    </table>
+            </body>
+
+
+    <script>
+        $(document).ready( function () {
+            $('#example').DataTable();
+        } );
+
+
+    </script>
+
+

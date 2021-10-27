@@ -4,7 +4,7 @@
 <title>Query Page</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 <link rel="stylesheet" href="css/styles.css">
-
+<script async src="https://cse.google.com/cse.js?cx=7c903019d793c3aa0"></script>
 </head>
 
 
@@ -26,22 +26,23 @@
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	 <ul class="navbar-nav mr-auto">
 
-	   <li class="nav-item active">
-		 <a class="nav-link" href="#aboutUs">About Us</a>
+	   <li class="nav-item">
+		 <a class="nav-link" href="about.php">About Us</a>
 	   </li>
 	   <li class="nav-item">
-		 <a class="nav-link" href="#contactUs">Contact Us</a>
+		 <a class="nav-link" href="contact.php">Contact Us</a>
 	   </li>
 
-	   <li class="nav-item">
+	   <li class="nav-item active">
 		 <a class="nav-link" href="query.php">Query</a>
 	   </li>
 
 	 </ul>
 	 <form class="form-inline my-2 my-lg-0">
-	   <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+	   <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
 	   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
-	   </button>
+	   </button> -->
+	   <div class="gcse-searchbox-only">Search</div> 
 	 </form>
    </div>
    
@@ -63,10 +64,6 @@
 			</div>
 
 		</div>
-
-
-	</div>
-	</div>
 		
 	</div>
 	
@@ -74,26 +71,26 @@
 		<div class="container download" id="downloads">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 col-xs-12">
-				<input type="hidden" name="selection" value="Q1" /> 
-				<a href="#" onclick="document.getElementById('form1').submit();">
+				<input type="hidden" name="selection" id="sub" value="">
+				<a href="#" onclick="document.getElementById('sub').value='Q1';document.getElementById('form1').submit();">
 					<img alt="AltText" src="cell-phone-svgrepo-com.svg" class="img-fluid">
-					<p class="lead">Mobile phones</p>
+					<p class="lead" style="text-align: center">Mobile phones</p>
 				</a>
 				</div>
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
-				<input type="hidden" name="selection" value="Q2" /> 
-				<a href="#" onclick="document.getElementById('form1').submit();">
+				 
+				<a href="#" onclick="document.getElementById('sub').value='Q2';document.getElementById('form1').submit();">
 					<img alt="AltText" src="population.svg" class="img-fluid" style="width:346.66px;">
-					<p class="lead">Population</p>
+					<p class="lead" style="text-align: center">Population</p>
 				</a>
 				</div>
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
-				<input type="hidden" name="selection" value="Q3" /> 
-				<a href="#" onclick="document.getElementById('form1').submit();">
+				
+				<a href="#" onclick="document.getElementById('sub').value='Q3';document.getElementById('form1').submit();">
 					<img src="life.svg" alt="AltText" class="img-fluid" style="width:346.66px;">
-					<p class="lead">Life Expectancy</p>
+					<p class="lead" style="text-align: center">Life Expectancy</p>
 				</a>
 				</div>
 
@@ -102,20 +99,20 @@
 			</div>
 			<div class="row" style="justify-content: center;">
 				<div class="col-md-4 col-sm-4 col-xs-12">
-				<input type="hidden" name="selection" value="Q4" /> 
-				<a href="#" onclick="document.getElementById('form1').submit();">
+				 
+				<a href="#" onclick="document.getElementById('sub').value='Q4';document.getElementById('form1').submit();">
 					<img alt="AltText" src="gdp.svg" class="img-fluid">
-					<p class="lead">GDP</p>
+					<p class="lead" style="text-align: center">GDP</p>
 				</a>
 				</div>
 
 				
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
-				<input type="hidden" name="selection" value="Q5" /> 
-				<a href="#" onclick="document.getElementById('form1').submit();">
+				
+				<a href="#" onclick="document.getElementById('sub').value='Q5';document.getElementById('form1').submit();">
 					<img src="childhood.svg" alt="AltText" class="img-fluid">
-					<p class="lead">Childhood</p>
+					<p class="lead" style="text-align: center">Childhood</p>
 				</a>
 				</div>
 

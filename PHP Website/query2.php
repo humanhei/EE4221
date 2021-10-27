@@ -3,17 +3,18 @@
 	<meta charset="UTF-8">
 	<title>Example Site!</title>
 	<link rel="stylesheet" href="css/styles.css">
+
 </head>
      <body>
           <?php
                include 'get-parameters.php';
-
+               
                $conn = new mysqli($ep, $un, $pw, $db);
+               
                $_pick = $_POST['selection'];
-
+     
                switch ($_pick) {
                     case "Q1":
-                    
                          include 'mobile.php';
                          break;
                          
@@ -35,7 +36,8 @@
                }
           ?>
 
-          <div id="Copyright" class="center">
+          <div id="Copyright" class="center" style="padding-top:160px;">
+               <hr>
                <h5>&copy; 2021, EE4221 or its Affiliates. All rights reserved.</h5>
           </div>
      </body>

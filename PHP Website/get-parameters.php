@@ -12,9 +12,9 @@
 
   try {
     # Retrieve settings from Parameter Store
-    $result = $ssm_client->GetParametersByPath(['Path' => '/example/', 'WithDecryption' => true]);
+    $result = $ssm_client->GetParametersByPath(['Path' => '/example/', 'WithDecryption' => false]);
     # Extract individual parameters
-
+    
     foreach($result['Parameters'] as $p) {
         $values[$p['Name']] = $p['Value'];
     }
@@ -23,13 +23,13 @@
     $un = $values['/example/username'];
     $pw = $values['/example/password'];
     $db = $values['/example/database'];	
-
+    
   }
   catch (Exception $e) {
-    $ep = '';
-    $db = '';
-    $un = '';
-    $pw = '';
+    $ep = 'mydb.cjne7x0q3uff.us-east-1.rds.amazonaws.com';
+    $db = 'mydb';
+    $un = 'admin';
+    $pw = 'mypassword';
     error_log($e);
   }
 

@@ -6,6 +6,7 @@
 	<title>Example Site;!</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/styles.css">
+	<script async src="https://cse.google.com/cse.js?cx=7c903019d793c3aa0"></script>
 
 </head>
 
@@ -27,11 +28,11 @@
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	 <ul class="navbar-nav mr-auto">
 
-	   <li class="nav-item active">
-		 <a class="nav-link" href="#aboutUs">About Us</a>
+	   <li class="nav-item">
+		 <a class="nav-link" href="about.php">About Us</a>
 	   </li>
 	   <li class="nav-item">
-		 <a class="nav-link" href="#contactUs">Contact Us</a>
+		 <a class="nav-link" href="contact.php">Contact Us</a>
 	   </li>
 
 	   <li class="nav-item">
@@ -52,23 +53,42 @@
 	   </li> -->
 	 </ul>
 	 <form class="form-inline my-2 my-lg-0">
-	   <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-	   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
-	   </button>
+	   <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+	   <div class="gcse-searchbox-only">Search</div>
+	   <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+		   
+	   </button> -->
 	 </form>
    </div>
    
  </nav>
 
 
-
-
-
-
-	<div id="header" class="mainHeader">
+<div id="header" class="mainHeader">
 		<hr>
-		<div class="center"><H1>Example Social Research Organization</H1></div>
+		
+		<div class="imagebox">
+			<img src="banner-aepub.jpg" width="100%" height="50%"/>
+			
+			<div class="main_content">
+				<H2>Example Social Research Organization</H2>
+				<br>
+				<br>
+				<br>
+				<div class="element" style="display:flex">
+				<H2>Professional</H2>
+				<H2>Human-centred</H2>
+				<H2>Passionate</H2></div>
+				
+			</div>
+
+		</div>
+		
 	</div>
+
+
+
+
 	<br>
 	<?php
 		// Get the application environment parameters from the Parameter Store.
@@ -77,72 +97,48 @@
 		// Display the server metadata information if the showServerInfo parameter is true.
 	
 	?>
-	<hr>
-	<div class="topnav">
-		<a href="#aboutUs">About Us</a>
-		<a href="#contactUs">Contact Us</a>
-		<a href="query.php">Query</a>
-	</div>
-	<hr>
+
+	
 	<div id="mainContent">
 
 		<div id="mainPictures" class="center">
 			
-			<hr>
+			
+			
+
+		</div>
+
+		<div class="row" style="padding:25px;">
+			<div class="col-md-4 col-sm-4 col-xs-12 row_content">
+				<img src="home_banner.png" style="width:100%;"/>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12 row_content">
 			<p>Welcome to our data query site. You can get data from countries all over the world to use in your research. </p>
 			<br>
-			<table>
-				<tr>
-				    <td>
-						<div class="cursiveText">We provide data for a variety of areas including basic demographics and development statistics.</div>
-						
-					</td>
-				</tr>
-			</table>
-			<hr>
+			<p>We provide data for a variety of areas including basic demographics and development statistics.</p>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12 row_content">
+				<img src="Social-Research.png" style="width:100%;"/>
+			</div>
 		</div>
 	</div>
 
-	<div id="aboutUs" class="center">
-		<hr>
-		<div>
-			<h2>About Us</h2>
-		</div>
-			<table>
-				<tr>
-					<td><figure><img src="Shirley.png" height=auto width="400"><figcaption>Shirley Rodriguez</figcaption></figure></td>
-				</tr>	
-					<tr><td><p>Our site got started when Shirley Rodriguez found that she was frequently looking up data from a variety of databases. <br>Shirley decided to start sharing some of this data with other social researchers. </p></td>
-				</tr>
-			</table>
-			<hr>
-		</div>
 
-	<div id="contactUs" align="center">
-		<hr>
-		<div>
-			<h2>Contact Us</h2>
-		</div>
-		<table>
-			<tr>
-				<td><img src="Logo.png" height=auto width="120"></td>
-			</tr>
-		</table>
-		<div><p>123 Any Street<br>Any Town, USA<br></p></div>
-		<div>
-			<h3>Hours</h3>
-		</div>
-		<div>Weekdays: 6:00am - 6:00pm<br>Saturday: 7:00am - 7:00pm<br>Closed on Sundays</div>
-	</div>
+	
+
+	
 
 	<div id="Copyright" class="center">
+		<hr>
 		<h5>&copy; 2020, Amazon Web Services, Inc. or its Affiliates. All rights reserved.</h5>
 	</div>
 </body>
 </html>
 <!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+	<script async src="https://cse.google.com/cse.js?cx=7c903019d793c3aa0"></script>
