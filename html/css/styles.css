@@ -1,0 +1,113 @@
+/* # CSS file for your own CSS */
+
+figure img {
+    vertical-align: top;
+}
+
+figure, figcaption {
+    text-align: center;
+}
+
+.data {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.data td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.data tr:nth-child(even){background-color: #f2f2f2;}
+
+.data tr:hover {background-color: #ddd;}
+
+.data th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+form {
+  display:flex;
+  padding-right:15px;
+}
+
+.navbar-collapse{
+  justify-content: space-between;
+}
+
+.navbar {
+padding-left: 25px;
+}
+
+h1{
+  padding-top:40px;
+}
+
+.container{
+  padding:0px;
+}
+
+/* Container holding the image and the text */
+.imagebox {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.download{
+  padding:20px;
+}
+
+h5{
+  padding-left:15px;
+}
+/* Content text */
+.query_content {
+  
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  transform: translate(-30%, -30%);
+}
+
+body{
+  background-color: #fafafa;
+}
+
+.main_content {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  color: darkblue;
+  transform: translate(-30%, -30%);
+  font-style: normal;
+  font-family: fantasy;
+}
+
+h2{
+  padding-left:60px;
+  padding-bottom:30px;
+}
+
+.row_content{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
